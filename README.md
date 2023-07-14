@@ -5,13 +5,14 @@
 - HTML
 - CSS
 - External Sources:
-    - Image
-
+    - Images from Willy Chavarria Collection
+    - Inspiration from FKA Twigs
+    - Ingmar Bergman
 ---
 
 ## Development
 
-During the first day of this project, I didn’t get any inspiration, imagination in designing or any type of website thinking for this project. Until I slide into one of my favorite designer who I admire alot since 2022. His name is Willy Chavarria and he is from Brooklyn, New York. He had a very modern minimalist, industrialist, and politic concept of design. His challenging concept in fashion industry, makes me wanted to do more with less. So, I decided to choose him as my website design subject.
+During the first day of this project, I didn’t get any inspiration, imagination in designing or any type of website thinking for this project. Until I slide into one of my favorite designer who I admire alot since 2022. His name is Willy Chavarria and he is from Brooklyn, New York. He had a very modern minimalist, industrialist, and politic concept of design. His challenging the concept in fashion industry, makes me wanted to do more with less. So, I decided to choose him as my website design subject. But in the moment I didn't get any specific idea until this several things came to me and one is influenced me the most is FKA Twigs Album called "Magdalene" to make this website even more thematic.
 
 
 This are view of my Inspiration in the making of this website:
