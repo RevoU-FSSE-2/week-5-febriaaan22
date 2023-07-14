@@ -13,28 +13,35 @@
 
 During the first day of this project, I didn’t get any inspiration, imagination in designing or any type of website thinking for this project. Until I slide into one of my favorite designer who I admire alot since 2022. His name is Willy Chavarria and he is from Brooklyn, New York. He had a very modern minimalist, industrialist, and politic concept of design. His challenging concept in fashion industry, makes me wanted to do more with less. So, I decided to choose him as my website design subject.
 
+
 This are view of my Inspiration in the making of this website:
 1. Ingmar Bergman
+
 ![Ingmar Bergman](readme.md%20Documentation/Ingmar%20Inspiration.jpeg)
+
 2. Kinfolk Magazine
 ![Kinfolk Magazine](readme.md%20Documentation/Inspiration%202.png)
 3. Simplicite by Dominique Loreau
-![Simplicite](readme.md%20Documentation/Inspiration.jpeg)
+
+    ![Simplicite](readme.md%20Documentation/Inspiration.jpeg)
+
 4. Magdalene by FKA Twigs
-![MagdaleneAlbum](readme.md%20Documentation/Magdalene%202.jpeg)
 ![Magdalene](readme.md%20Documentation/Magdalene%201.jpeg)
+![MagdaleneAlbum](readme.md%20Documentation/Magdalene%202.jpeg)
 
 
 ---
 
 ## Stages of Development
 
-I put same header and foot for each web pages because this is multiple pages with just different section.
+Along the way in the making of this website, my head is jumping back and forth with so many turmoil and chaotic overthinking. Asking same question every single day, “Could I challenge myself to do something that I never did before?” and “Can I done this before the deadline?”. So that question slowly shaping into challenging phases in my last 5 days and the result is this website containing multiple pages that I never did before with the following stages;
 
 1. Header
 ![Header](readme.md%20Documentation/Header.png)
 2. Footer
 ![Footer](readme.md%20Documentation/Footer.png)
+
+I put same header and foot for each web pages because this is multiple pages with just different section.
 
 ---
 
