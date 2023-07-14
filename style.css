@@ -616,3 +616,9 @@ textarea {
         border-radius: 4px;
         cursor: pointer;
     }
+
+@media(max-width:1366px){
+        html{
+            font-size: 75%;
+        }
+    }
