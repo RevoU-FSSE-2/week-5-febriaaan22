@@ -1,0 +1,618 @@
+@font-face {
+    font-family: Helvetica;
+    src: url(Fonts/Helvetica.ttf);
+}
+@font-face {
+    font-family: Helvetica;
+    src: url(Fonts/Helvetica-Bold.ttf);
+    font-weight: bold;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Images/Willy\ Chavarria\ 22.webp);
+    background-position: center;
+    background-size: color;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 30px 20px;
+    justify-content: space-between;
+    align-items: center; 
+}
+nav img{
+    width: 400px;
+    padding: 1% 5%;
+    opacity: 1;
+    filter: brightness(100%);
+}
+
+ /**
+        Hamburger
+    **/
+    .hamburger {
+        position: relative;
+        width: 30px;
+        height: 4px;
+        background-color: #800D0D;
+        border-radius: 10px;
+        cursor: pointer;
+        z-index: 2;
+        transition: 0.3s;
+    }
+    
+    .hamburger:before,
+    .hamburger:after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        right: 0;
+        border-radius: 10px;
+        background: #800D0D;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger:before {
+        top: -10px;
+        width: 20px;
+    }
+    .hamburger:after{
+        top:10px;
+        width: 25px;
+    }
+
+    .toggle{
+        position: absolute;
+        width: 30px;
+        height: 100%;
+        z-index: 3;
+        cursor: pointer;
+        opacity: 0;
+    }
+
+/**
+Animation
+**/
+.hamburger,
+.toggle {
+    display: none;
+}
+#toggle input:checked ~ .hamburger {
+    background:transparent;
+    }
+#toggle input:checked ~ .hamburger::before {
+    top: 0;
+    transform: rotate(-45deg);
+    width: 30px;
+    }
+#toggle input:checked ~ .hamburger::after {
+    top: 0;
+    transform: rotate(45deg);
+    width: 30px;
+    }
+#toggle input:checked ~ .menu {
+    right: 0;
+    box-shadow: -20px 0 40px rgba(4,9,30,0.7);
+    }
+
+@media screen and (max-width:768px) {
+    .hamburger,
+    .toggle {
+        display: block;
+    }
+    .menu {
+        position: absolute;
+        right: 10px;
+        width: 300em;
+        height: 170px;
+        background: black;
+        z-index: 99;
+    }
+    .menu li{
+        width: 100%;
+    }
+    
+    .menu li a,
+    .menu li a:hover{
+        padding: 30px;
+        font-size: 24px;
+        box-shadow: 0 1px 0 rgba(4,9,30,0.7);
+    }
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #ffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #a2b9bc;
+    display: block;
+    margin: auto;
+    transition: 0.5s; 
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.textbox{
+    width: 90%;
+    color: whitesmoke;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.textbox h1{
+    font-size: 75px;
+}
+.textbox p{
+    margin: 10px 0 40px;
+    font-size: 25px;
+    color: #ffff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #ffff;
+    border: 1px solid #ffff;
+    padding: 10px 34px;
+    font-size: 19px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid white;
+    background: #3c4043;
+    transition: 1s;
+}
+
+.Collection{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color:#020B13;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    line-height: 2;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.collection-col{
+    flex-basis: 32%;
+    background: #F5F6F2;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box; 
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.collection-col:hover{
+    box-shadow: 0 0 20px 0px #301B14;
+    transition: 0.3s;
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*------- Feature -----*/
+
+.feature{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.feature-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-col img{
+     width: 100%;
+     height: 100%;
+     display: block;
+}
+
+.layer{
+    background: transparent;
+    height:100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.4s;
+}
+
+.layer:hover{
+    background-color: #020B13;
+    opacity: 0.6;
+}
+
+.layer h3{
+    width: 100%;
+    font-weight: 800;
+    color: whitesmoke;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.4s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+/****** Newest *****/
+
+.Newest{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.newest-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.newest-col img{
+    width: 100%;
+    height: 60vh;
+    border-radius: 15px;
+}
+
+.newest-col p{
+    padding: 0;
+}
+.newest-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/*-----Footer-----*/
+
+footer{
+    background: #222831;
+    opacity: 1;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
+}
+
+.footer-container{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-betwen;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+
+.footer-col {
+    text-align: center;
+    font-size: 20px;
+    padding: auto;
+}
+
+.footer-col img{
+    width: 100%;
+    height: auto;
+    filter: brightness(100%);
+}
+
+.navigation-footer{
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-footer a{
+    color: whitesmoke;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.navigation-footer a:after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #a2b9bc;
+    display: block;
+    margin: auto;
+    transition: 1s; 
+}
+
+.right-text p{
+    font-size: 18px;
+    color: whitesmoke;
+}
+
+/*-------- About ------*/
+
+.sub-header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Images/Willy\ Chavarria\ 7.webp);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #F5F6F2;
+}
+
+.sub-header h1{
+    margin-top: -5%;
+    text-decoration: underline;
+    color: #EDE0D4;
+    opacity: 1;
+}
+
+.AboutWilly {
+    width: 80%;
+    margin: auto;
+    padding-top: 2%;
+    padding-bottom: 50px;
+    padding-left: 5%;
+    padding-right: 4%;
+}
+
+.about-col{
+    flex-basis: 49%;
+    padding: 30px 2px;
+}
+
+.about-col {
+    width: 100%;
+}
+
+.about-col h1 {
+    padding-left: 0em 1em 0em 1em;
+    text-align: center;
+}
+
+.about-col p{
+    padding: 10px 20px 10px;
+    text-align: justify;
+    text-indent: 30px;
+}
+.Carousel-Willy {
+    position: relative;
+    max-width: 150rem;
+    margin: auto;
+    padding: 0em 0.5em 3em 0;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 4 / 3;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem;
+    border-radius: 0.5rem;
+}
+
+.slider img {
+    width: 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.Slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.dot {
+    cursor: pointer;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #222831;
+    opacity: 0.50;
+    transition: opacity ease 150ms;
+}
+
+.active, .dot:hover {
+    opacity: 1;
+}
+
+
+/*------Collection------*/
+
+.celebrity-sec {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Images/Willy\ Chavarria\ 15.webp);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #F5F6F2;
+}
+
+.celebrity-sec h1{
+    margin-top: -5%;
+    text-decoration: underline;
+    color: #EDE0D4;
+    opacity: 1;
+}
+
+.Celebritywilly {
+    width: 60%;
+    margin: auto;
+    padding-top: 2%;
+    padding-bottom: 50px;
+    padding-left: 5%;
+    padding-right: 4%;
+}
+
+.Carousel-Willy-Celebrity {
+    position: relative;
+    max-width: 150rem;
+    margin: auto;
+    padding: 1em 2em 4em 2em;
+}
+
+.slider-celeb {
+    display: flex;
+    aspect-ratio: 3 / 4;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0em 1.5rem 3rem -0.75rem;
+    border-radius: 0.5rem;
+}
+
+.slider-celeb img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.Slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.dot {
+    cursor: pointer;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #222831;
+    opacity: 0.5;
+    transition: opacity ease 150ms;
+}
+
+.active, .dot:hover {
+    opacity: 1;
+}
+
+.Celebritywilly h2{
+    text-align: center;
+    text-shadow: 1px 1px black;
+}
+
+.Celebritywilly p{
+    text-align: center;
+    text-shadow:black;
+}
+
+
+/*-----Contact-------*/
+
+.contact-sec {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Images/Willy\ Chavarria\ 8.webp);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #F5F6F2;
+}
+
+.contact-sec h1{
+    margin-top: -5%;
+    text-decoration: underline;
+    color: #EDE0D4;
+    opacity: 1;
+}
+
+#contact{
+    display: flex;
+    height: 90vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-right: 10em;
+    margin-bottom: 16px;
+    resize: vertical;
+    }
+
+    button[type=submit] {
+        background-color: #3c4043;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
