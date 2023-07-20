@@ -11,6 +11,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 header{
     width: 100%;
@@ -24,7 +25,7 @@ nav{
     display: flex;
     padding: 30px 20px;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
 }
 nav img{
     width: 400px;
@@ -125,6 +126,32 @@ Animation
         box-shadow: 0 1px 0 rgba(4,9,30,0.7);
     }
 }
+
+@media screen and (max-width:400px) {
+    .hamburger,
+    .toggle {
+        display: inline-block;
+    }
+    .menu {
+        position: absolute;
+        right: 10px;
+        width: 100em;
+        height: 170px;
+        background: black;
+        z-index: 99;
+    }
+    .menu li{
+        width: 100%;
+    }
+    
+    .menu li a,
+    .menu li a:hover{
+        padding: 30px;
+        font-size: 24px;
+        box-shadow: 0 1px 0 rgba(4,9,30,0.7);
+    }
+}
+
 
 .nav-links{
     flex: 1;
@@ -231,12 +258,6 @@ h3{
 .collection-col:hover{
     box-shadow: 0 0 20px 0px #301B14;
     transition: 0.3s;
-}
-
-@media(max-width: 700px){
-    .row{
-        flex-direction: column;
-    }
 }
 
 /*------- Feature -----*/
@@ -617,8 +638,89 @@ textarea {
         cursor: pointer;
     }
 
-@media(max-width:1366px){
-        html{
-            font-size: 75%;
-        }
+@media screen and (min-device-width:320px) and (max-device-width:480px) {
+    .textbox{
+        display: grid;
+        width: 70%;
+        overflow: hidden;
     }
+
+    .textbox h1{
+        display: none;
+    }
+
+    i{
+        padding-top: 250px;
+        font-size: 20px;
+    }
+    nav img{
+        width: 80%;
+    }
+
+    .hamburger .hamburger::after
+    .hamburger::before .hamburger:after
+    .hamburger:before {
+        flex: 50%;
+    }
+
+    .footer-col{
+        width: 100%;
+    }
+
+    .collection-col{
+        padding: 20px 0% 20px 0%;
+    }
+
+    .navigation-footer {
+        display: inline-grid;
+        justify-content: center;
+    }
+
+    .slider{
+        position: relative;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        margin-right: 0px;
+    }
+
+    .Contact {
+        height: 120vh;
+    }
+}
+
+@media screen and (min-width:640px){
+    html{
+        max-width: 640px;
+    }
+}
+
+@media screen and (min-width:768px){
+    html{
+        max-width: 768px;
+    }
+
+    .Contact{
+        height: 150vh;
+    }
+}
+
+@media screen and (min-width:1024px){
+    html{
+        max-width: 1024px;
+    }
+}
+
+@media screen and (min-width: 1280px){
+    html{
+        max-width: 1280px;
+    }
+}
+
+@media screen and (min-width: 1536px){
+    html{
+        max-width: 1536px;
+    }
+}
